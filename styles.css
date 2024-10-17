@@ -86,17 +86,19 @@ body{
 }
 
 /* Styling for the arrow */
-/* 
+
 .storage_container .arrow{
-    position: absolute;
-    top: 5rem;
-    right: 2rem;
+    
     display: inline-block;
-    background-color: hsl(0, 0%, 100%) ;
-    width: 20px ;
-    height: 20px;
+    width: 30px;
+    height: 23px;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
+    position: absolute;
+    top: 4.25rem;
+    right: 1.5rem;
     border-radius: 1px;
-    } */
+    }
 
 .storage_container .bar{
     display: flex;
