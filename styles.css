@@ -1,8 +1,6 @@
 /* Font - Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +27,8 @@ body{
     width: fit-content;
     background-color: hsl(228, 56%, 26%);
     border-radius: 7px;
-    border-top-right-radius:5rem ;
+    border-top-right-radius:6.5rem ;
+    box-shadow: 0 32px 56px 0 hsla(229, 57%, 11%, 0.75)
 }
 
 .flyo_container .icons{
@@ -40,10 +39,12 @@ body{
 }
 
 .flyo_container .icons img{
-    background-color: hsl(229, 57%, 11%);
+    background-color: hsl(229, 57%, 11%, 0.75);
     padding: .5rem;
     border-radius: 7px;
-    width: fit-content;
+    height: 35px;
+    width: 35px;
+    width: 100%;
 }
 
 .storage_container{
@@ -52,11 +53,16 @@ body{
     justify-content: center;
     gap: 1rem;
     background-color: hsl(228, 56%, 26%);
-    padding: 2rem;
     border-radius: 7px;
+    box-shadow: 0 32px 56px 0 hsl(229, 57%, 11%);
 }
 
-.storage_container p span{
+.storage_container h1 {
+   font-size: 1rem;
+   font-weight: 400;
+}
+
+.storage_container h1 span{
     font-weight:bold ;
 }
 
@@ -74,7 +80,7 @@ body{
 .storage_container .pop_up .remainder{
     background-color: hsl(0, 0%, 100%); 
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: hsl(229, 57%, 11%);
     margin: 0 3px;
 }
@@ -97,16 +103,16 @@ body{
     justify-content:flex-start;
     align-items: center;
     position: relative;
-    width: 400px;
+    width:450px;
     height: 12px;
-    border: 1px solid hsl(229, 57%, 11%);
-    background-color: hsl(229, 57%, 11%);
+    border: 1px solid hsla(229, 57%, 11%, 0.1);
+    background-color: hsla(229, 57%, 11%, 0.5);
     border-radius: 20px;
     padding: .5rem 0;
 }
 
 .storage_container .bar .storage_occupied{
-    display: inline;
+    display: inline-block;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -116,6 +122,7 @@ body{
     border-radius: 20px;
     color: white;
     margin: 1px 2px;
+    width: 81.5%;
 }
 
 .storage_container .bar .storage_occupied .ball{
@@ -172,7 +179,7 @@ body{
         /* align-items: center; */
     }
 
-    .storage_container p{
+    .storage_container h1{
         text-align: center;
     }
 
@@ -192,7 +199,7 @@ body{
     }
 
     .storage_container .bar .storage_occupied{
-        width:80%;
+        width:81.5%;
     }
     
 }
@@ -200,7 +207,7 @@ body{
 @media screen and (min-width: 768px) {
     body {
         background-image: url(./images/bg-desktop.png);
-        padding-bottom: 43rem;
+        padding-bottom: 50rem;
     }
 
     main {
@@ -211,22 +218,26 @@ body{
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(30%, 80%);
+        transform: translate(30%, 130%);
     }
 
     .flyo_container {
         padding: 3rem 2rem;
-        padding-right: 8rem;
+        padding-right: 10rem;
+    }
+
+    .storage_container{
+        padding: 2rem 3rem;
     }
 
     .storage_container .pop_up{
         position: absolute;
-        top: 1rem;
-        right:2rem;
+        top: 0rem;
+        right:1.5rem;
     }
 
-    .storage_container .bar .storage_occupied{
-        width: 300px;
-    }
+    /* .storage_container .bar .storage_occupied{
+        width: ;
+    } */
     
 }
