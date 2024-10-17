@@ -1,0 +1,232 @@
+/* Font - Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-color: hsl(229, 57%, 11%);
+    color: hsl(243, 100%, 93%);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Common Styles */
+
+.flyo_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 7px;
+    border-top-right-radius:5rem ;
+}
+
+.flyo_container .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flyo_container .icons img{
+    background-color: hsl(229, 57%, 11%);
+    padding: .5rem;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+.storage_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+    border-radius: 7px;
+}
+
+.storage_container p span{
+    font-weight:bold ;
+}
+
+.storage_container .pop_up{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(229, 57%, 11%);
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    font-size: smaller;
+    border-radius: 5px;
+}
+
+.storage_container .pop_up .remainder{
+    background-color: hsl(0, 0%, 100%); 
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(229, 57%, 11%);
+    margin: 0 3px;
+}
+
+/* Styling for the arrow */
+/* 
+.storage_container .arrow{
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%) ;
+    width: 20px ;
+    height: 20px;
+    border-radius: 1px;
+    } */
+
+.storage_container .bar{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 12px;
+    border: 1px solid hsl(229, 57%, 11%);
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 20px;
+    padding: .5rem 0;
+}
+
+.storage_container .bar .storage_occupied{
+    display: inline;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 12px;
+    background: linear-gradient( to left, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    background-color: white;
+    border-radius: 20px;
+    color: white;
+    margin: 1px 2px;
+}
+
+.storage_container .bar .storage_occupied .ball{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 50%;
+    margin: 1px 2px;
+}
+
+.storage_container .numbers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Mobile Design */
+@media screen and (max-width: 768px) {
+    body{
+        background-image: url(./images/bg-mobile.png);
+        background-size: 100vh;
+        padding: 10rem 2rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .flyo_container {
+        width: 75%;
+        min-width: 320px;
+        padding: 2rem;
+        padding-right: 6rem;
+        align-items: flex-start;
+      }
+
+    .flyo_container img{
+        width: 75%;
+    }
+
+    .flyo_container div img{
+        width: 25%;
+   }
+
+    .storage_container{
+        width: 75%;
+        min-width:320px;
+        padding: 2rem 1rem;
+        /* align-items: center; */
+    }
+
+    .storage_container p{
+        text-align: center;
+    }
+
+    .storage_container .pop_up{
+        position: absolute; 
+        bottom: -3rem;
+        left:25%;
+        margin: auto;
+    }
+
+    .storage_container .arrow{
+        display: none !important;
+    }
+
+    .storage_container .bar{
+        width: 100%;
+    }
+
+    .storage_container .bar .storage_occupied{
+        width:80%;
+    }
+    
+}
+/* Desktop Design */
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        padding-bottom: 43rem;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(30%, 80%);
+    }
+
+    .flyo_container {
+        padding: 3rem 2rem;
+        padding-right: 8rem;
+    }
+
+    .storage_container .pop_up{
+        position: absolute;
+        top: 1rem;
+        right:2rem;
+    }
+
+    .storage_container .bar .storage_occupied{
+        width: 300px;
+    }
+    
+}
