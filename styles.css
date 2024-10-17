@@ -176,7 +176,6 @@ body{
         width: 75%;
         min-width:320px;
         padding: 2rem 1rem;
-        /* align-items: center; */
     }
 
     .storage_container h1{
@@ -235,9 +234,4 @@ body{
         top: 0rem;
         right:1.5rem;
     }
-
-    /* .storage_container .bar .storage_occupied{
-        width: ;
-    } */
-    
 }
